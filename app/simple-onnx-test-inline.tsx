@@ -140,16 +140,16 @@ export default function ModalScreen() {
             data: dataA,
             dataLocation: "cpu",
             type: "uint8",
-            dims: [1, 3, 576, 320],
-            size: 3 * 576 * 320,
+            dims: [3, 4],
+            size: 12,
           } as unknown as ort.Tensor;
 
           let inputTensorB = {
             data: dataB,
             dataLocation: "cpu",
             type: "uint8",
-            dims: [1, 3, 576, 320],
-            size: 3 * 576 * 320,
+            dims: [4, 3],
+            size: 12,
           } as unknown as ort.Tensor;
 
           console.log("made tensors..");
@@ -158,7 +158,8 @@ export default function ModalScreen() {
           console.log(`feeds: ${feeds}`);
 
           console.log("running session..");
-          try {
+          try { 
+            // TypeError: session.run is not a function (it is undefined)
             session.run(feeds).then((fetches: any) => {
               console.log(`model ran.`);        
               const dataC = fetches.c.data;

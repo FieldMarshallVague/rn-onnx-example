@@ -93,16 +93,16 @@ async function runSession(session: InferenceSession){
     data: dataA,
     dataLocation: "cpu",
     type: "uint8",
-    dims: [1, 3, 576, 320],
-    size: 3 * 576 * 320,
+    dims: [3, 4],
+    size: 12,
   } as unknown as ort.Tensor;
 
   let inputTensorB = {
     data: dataB,
     dataLocation: "cpu",
     type: "uint8",
-    dims: [1, 3, 576, 320],
-    size: 3 * 576 * 320,
+    dims: [4, 3],
+    size: 12,
   } as unknown as ort.Tensor;
 
   console.log("made tensors..");
