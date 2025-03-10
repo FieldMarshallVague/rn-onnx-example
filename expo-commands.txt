@@ -1,0 +1,27 @@
+# check deps
+npx expo-doctor
+
+# fix deps
+npx expo install --check 
+
+# build android pkg
+npx expo run:android
+
+# 'eject' (deprecated in favour of this approach, which handles native pkgs)
+npx expo prebuild --clean
+
+# not sure
+npx expo start --dev-client
+
+# use Expo servers to handle hosting/routing?
+npx expo start --tunnel --dev-client
+
+
+
+General usage commands:
+
+# clear gradle cache
+./gradlew clean
+
+# clear build artefacts not cleared by gradle clean.
+find node_modules -type d -name ".cxx" -exec rm -rf {} +

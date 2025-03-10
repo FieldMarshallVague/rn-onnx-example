@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "rnonnxexample",
+    "slug": "rnonnxexample",
+    "scheme": "rnonnxexample",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "jsEngine": "hermes",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {}
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["android.permission.CAMERA"],
+      "package": "com.rnonnxexample.rnonnxexample"
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "react-native-permissions",
+        {
+          "ios": [],
+          "android": []
+        }
+      ],
+      "expo-router",
+      "expo-sqlite",
+      ["expo-build-properties", { "android": { "minSdkVersion": 26 } }],
+      "react-native-vision-camera",
+      "onnxruntime-react-native"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "55d9797e-a005-41b2-bcd8-01642e6a88af"
+      }
+    }
+  }
+}

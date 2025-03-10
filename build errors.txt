@@ -1,0 +1,13 @@
+onnx module referred to expo config which was outdated.
+  this has been removed in latest version of onnxruntime-react-native module
+
+expo-gl was referenced and broke gradle build, but it disappeared via pruning.
+
+compileSdkVersion was 'missing' but it wasn't.  seemed to be a mismatch between host gradle config and node module.
+they used compileSdk and compileSdkVersion (I included both to get over an error, but this might not be necessary now)
+
+android build failed for various reasons, one of which was fixed by cleaning (prebuild clean)
+
+
+
+
